@@ -2,20 +2,15 @@ package ru.netology.stats;
 
 public class StatsService {
     public long sumSale(long[] sales) {
-     long totalSale = 0;
-     for (long sale : sales) {
-         totalSale += sale;
-     }
-     return totalSale;
-    }
-
-    public long averageSale(long[] sales) {
         long totalSale = 0;
         for (long sale : sales) {
             totalSale += sale;
         }
-        long average = totalSale / 12;
-        return average;
+        return totalSale;
+    }
+
+    public long averageSale(long[] sales) {
+        return sumSale(sales) / 12;
     }
 
     public long maxMonthSale(long[] sales) {
